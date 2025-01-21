@@ -41,10 +41,10 @@ public class BookingController {
     }
 
     // Get all bookings
-    @GetMapping
-    public List<Booking> getAllBookings() {
-        return bookingRepository.findAll();
-    }
+//    @GetMapping("/user/{userId}")
+//    public Booking getBookingByUserId(Long userId) {
+//        return bookingRepository.findById(userId).orElseThrow(() -> new RuntimeException("Booking for user not found"));
+//    }
 
     // Delete booking
     @DeleteMapping("/{id}")
