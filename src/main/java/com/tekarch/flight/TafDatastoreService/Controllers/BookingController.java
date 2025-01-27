@@ -39,6 +39,13 @@ public class BookingController {
     public Booking getBooking(@PathVariable Long id) {
         return bookingRepository.findById(id).orElseThrow(() -> new RuntimeException("Booking not found"));
     }
+
+    //Get booking by User ID
+    @GetMapping("/user/{userId}")
+    public List<Booking> getBookingByUserId(@PathVariable Long userId) {
+        return bookingRepository.findBookingsByUserId(userId);
+    }
+
     // Get all bookings
     @GetMapping
     public List<Booking> getAllBookings() {
